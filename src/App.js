@@ -10,17 +10,18 @@ import {DB_CONFIG} from './config/firebase/db_config.js';
 class App extends Component {
   constructor(props){
     super(props);
-
-    this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child('cards');
-    this.updateCard = this.updateCard.bind(this);
+    
 
     this.state= {
       cards: [],
-      currentCard: {
-
-      }
+      currentCard: {},
+      track: "things"
     }
+
+    this.app = firebase.initializeApp(DB_CONFIG);
+    this.database = this.app.database().ref().child(this.state.track);
+    
+    this.updateCard = this.updateCard.bind(this);    
   }
 
   componentWillMount(){
@@ -52,6 +53,18 @@ class App extends Component {
     const currentCards = this.state.cards;
     this.setState({
       currentCard: this.getRandomCard(currentCards)
+    })
+  }
+
+  switchThings(){
+    this.setState({
+      track: 'things'
+    })
+  }
+
+  switchFood(){
+    this.setState({
+      track: 'food'
     })
   }
 
