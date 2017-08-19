@@ -11,6 +11,7 @@
     background: darkgray;
     margin: auto;
     margin-top: 20px;
+    
 }
 
 .btn:active {
@@ -19,4 +20,8 @@
     top: 3px;
     box-shadow: 0px 0px black;
     background: darkgray;
+}
+
+.buttonRow {
+    grid-area: button;
 }

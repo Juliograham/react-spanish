@@ -15,7 +15,7 @@ class App extends Component {
     this.state= {
       cards: [],
       currentCard: {},
-      track: "things"
+      track: "food"
     }
 
     this.app = firebase.initializeApp(DB_CONFIG);

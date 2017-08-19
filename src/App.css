@@ -1,3 +1,9 @@
-body {
+.App {
   background: #f7f7f7;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  ". . app"
+  ". . button";
+  height: 100vh;
 }
