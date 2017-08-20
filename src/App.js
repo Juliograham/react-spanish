@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './Card/Card';
 import Button from './Button/Button';
+import Intro from './Intro/Intro';
 import firebase from 'firebase/app';
 import 'firebase/database';
 
@@ -21,7 +22,9 @@ class App extends Component {
     this.app = firebase.initializeApp(DB_CONFIG);
     this.database = this.app.database().ref().child(this.state.track);
     
-    this.updateCard = this.updateCard.bind(this);    
+    this.updateCard = this.updateCard.bind(this);
+    this.switchThing = this.switchThing.bind(this);
+    this.switchFood = this.switchFood.bind(this);    
   }
 
   componentWillMount(){
@@ -56,21 +59,24 @@ class App extends Component {
     })
   }
 
-  switchThings(){
+  switchThing(){
     this.setState({
-      track: 'things'
+      track: "things"
     })
   }
 
   switchFood(){
     this.setState({
-      track: 'food'
+      track: "food"
     })
   }
 
   render() {
     return (
       <div className="App">
+        <div>
+        <Intro changeFood={this.switchFood} changeThing={this.switchThing} />
+        </div>
         <div className="cardRow">
         <Card eng={this.state.currentCard.eng} esp={this.state.currentCard.esp}/>
         </div>
