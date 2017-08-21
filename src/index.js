@@ -2,7 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import Things from './Things';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+ReactDOM.render(
+  <BrowserRouter>
+  <div>
+    <Route exact path='/' component={App} />
+    <Route exact path='/things' component={Things} />
+  </div>
+  </BrowserRouter>, 
+document.getElementById('root'));
+

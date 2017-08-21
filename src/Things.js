@@ -8,7 +8,7 @@ import 'firebase/database';
 
 import {DB_CONFIG} from './config/firebase/db_config.js';
 
-class App extends Component {
+class Things extends Component {
   constructor(props){
     super(props);
     
@@ -16,11 +16,11 @@ class App extends Component {
     this.state= {
       cards: [],
       currentCard: {},
-      track: "food"
+      track: "things"
     }
 
     this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child(this.state.track);
+    this.database = this.app.database().ref().child("things");
     
     this.updateCard = this.updateCard.bind(this);
     this.switchThing = this.switchThing.bind(this);
@@ -53,6 +53,7 @@ class App extends Component {
   }
 
   updateCard(){
+    console.log(this.state.track);
     const currentCards = this.state.cards;
     this.setState({
       currentCard: this.getRandomCard(currentCards)
@@ -86,4 +87,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Things;

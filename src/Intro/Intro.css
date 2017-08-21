@@ -1,11 +1,40 @@
-h1 {
-    background-image: linear-gradient(120deg, #66ff66 0%, #66ccff 100%);
+h1 span {
+    background-image: linear-gradient(120deg, #b3ffb3 0%, #66ccff 100%);
     background-repeat: no-repeat;
     background-size: 100% 0.2em;
     background-position: 0 88%;
-    transition: background-size 0.25s ease-in;
+    transition: background-size 0.25s ease-in;    
 }
 
-h1:hover {
+h1 span:hover {
         background-size: 100% 88%;
     }
+
+h1 {
+    text-align: center;
+}
+
+.intro {
+    grid-area: intro;
+    padding: 25px;
+}
+
+p {
+    margin-top: 50px;
+}
+
+.choices input {
+    margin-top: 70px;
+    width: 100px;
+    height: 70px;
+    padding-left: 30px;
+    display: flex;
+    border-radius: 5%;
+}
+
+.choices {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+}

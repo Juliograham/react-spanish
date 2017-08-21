@@ -34,7 +34,7 @@
     position: absolute;
     overflow: hidden;
     text-align: center;
-    background-color: lightcoral;
+    background-color: #b3ffb3;
 }
 
 .card .back {
@@ -42,7 +42,7 @@
     width: 400px;
     text-align: center;
     transform: rotateY(180deg);
-    background-color: lightsalmon;
+    background-color: #66ccff;
 }
 
 .eng {

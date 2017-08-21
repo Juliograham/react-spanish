@@ -20,14 +20,18 @@ class Intro extends Component {
     render(props) {
         return (
         <div className="intro">
-            <h1>Learn Spanish with Julio!</h1>
+            <h1><span>Learn Spanish with Julio!</span></h1>
             <p>Select a topic to study by clicking a button below. Hover your
             mouse over the card to alternate between English and Spanish. Press the 
             button below the card to study a new word.
             </p>
             <div className="choices">
-                <button onClick={this.changeThing}>Things</button>
-                <button onClick={this.changeFood}>Food</button>
+                <form action="/things">
+                  <input type="submit" value="Things" />
+                </form>
+                <form action="/">
+                  <input type="submit" value="Food" />
+                </form>
             </div>
         </div>
         )
