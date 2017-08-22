@@ -1,9 +1,13 @@
 .App {
-  background: #f7f7f7;
+  background: #ffe6ff;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 
-  "intro intro . app ."
-  "intro intro . button .";
+  ". intro intro . app ."
+  ". intro intro . button .";
   height: 100vh;
+}
+
+* {
+  font-family: 'Quattrocento Sans', sans-serif;
 }

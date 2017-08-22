@@ -27,7 +27,7 @@ class Intro extends Component {
             </p>
             <div className="choices">
                 <form action="/things">
-                  <input type="submit" value="Things" />
+                  <input type="submit" value="Various" />
                 </form>
                 <form action="/">
                   <input type="submit" value="Food" />

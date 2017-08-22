@@ -12,6 +12,7 @@ h1 span:hover {
 
 h1 {
     text-align: center;
+    font-size: 4em;
 }
 
 .intro {
@@ -21,6 +22,7 @@ h1 {
 
 p {
     margin-top: 50px;
+    font-size: 2em;
 }
 
 .choices input {
