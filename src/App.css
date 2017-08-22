@@ -3,6 +3,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 
+  "intro intro intro intro intro intro"
+  "app app app app app app"
+  ". . button button . .";
+  height: 100%;
+}
+
+* {
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+
+@media screen and (min-width: 1000px) {
+     .App {
+  background: #ffe6ff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
   ". intro intro . app ."
   ". intro intro . button .";
   height: 100vh;
@@ -10,4 +26,5 @@
 
 * {
   font-family: 'Quattrocento Sans', sans-serif;
+} 
 }
